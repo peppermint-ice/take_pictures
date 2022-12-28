@@ -1,7 +1,7 @@
-import cv2
 from datetime import datetime
-from check_for_camears import list_ports
+from check_for_cameras import list_ports
 from capturing import capturing_frame
+
 
 dt = datetime.now()
 current_time = dt.strftime("%Y_%m_%d_%H_%M_%S")
