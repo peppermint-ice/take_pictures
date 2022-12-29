@@ -45,10 +45,17 @@ def capturing_frame(port, datetime_str):
     cap.release()
 
 
-# launches the function which returns current date & time
-current_time = set_time()
+while True:
+    # launches the function which returns current date & time
+    current_time = set_time()
 
-# actually runs the script for every connected & working camera
-current_ports = list_ports()[1]
-for i in current_ports:
-    capturing_frame(i, current_time)
+    # actually runs the script for every connected & working camera
+    current_ports = list_ports()[1]
+    for i in current_ports:
+        capturing_frame(i, current_time)
+    try:
+        input("Press Enter to continue...")
+    except KeyboardInterrupt:
+        break
+
+

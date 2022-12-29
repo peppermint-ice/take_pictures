@@ -12,4 +12,7 @@ while True:
     print(working_ports)
     for i in working_ports:
         capturing_frame(i, current_time)
-    input("Press Enter to continue...")
+    try:
+        input("Press Enter to continue...")
+    except KeyboardInterrupt:
+        break
