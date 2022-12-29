@@ -11,7 +11,7 @@ def capturing_frame(port, datetime_str):
             cv2.destroyAllWindows()
             break
         # cv2.imwrite(''.join(['images/', datetime_str, '_c', str(port) + '.png']), frame)
-        cv2.destroyAllWindows()
+        # cv2.destroyAllWindows()
         break
 
     cap.release()
